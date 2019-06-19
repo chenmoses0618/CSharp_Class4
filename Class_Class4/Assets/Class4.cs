@@ -50,5 +50,44 @@ public class Class4 : MonoBehaviour
         getScores[1] = 0;
         getScores[2] = 0;
     }
-    
+    #region 函數判斷式
+    //宣告布林變數
+    public bool OpenDoor = true;
+    private int hp = 100;
+    //依據布林值判斷顯示內容
+    float smooth = 5.0f;
+    float tiltAngle = 60.0f;
+    public Transform cube;
+    private void Update()
+    {
+        if (OpenDoor)
+        {
+            Debug.Log("門打開了~");
+        }
+        else
+        {
+            Debug.Log("門關起來了~");
+        }
+        /*
+        if (hp >= 80) {
+            Debug.Log("現在很安全~");
+        }
+        else if (hp >= 50)
+        {
+            Debug.Log("現在有點危險~");
+        }
+        else if (hp >= 10)
+        {
+            Debug.Log("趕快喝水~");
+        }
+        else 
+        {
+            Debug.Log("你快結束了~");
+        }*/
+        cube.Rotate(0, 5, 0);
+      
+    }
+    #endregion
+
+
 }
