@@ -31,11 +31,24 @@ public class Class4 : MonoBehaviour
         Debug.Log("取得顏色陣列長度:" + colors.LongLength);
         //此時為引數
         sun(10, 7);
+        //整數為實值型別,只將變數內容數值傳入函數,對既有變數值不影響
+        ClearA(A);
+        //陣列為參考型別,傳送變數位址,實際會傳送變數型別進行修改
+        ClearScores(scores);
     }
-    //此時a,b為參數
+    //此時a,b為參數  一個加總函數
     private void sun(int a, int b) {
-        Debug.Log("總合為:" +(a+b));
+        Debug.Log("總合為:"+(a+b));
     }
-
+    private void ClearA(int getA)
+    {
+        getA = 0;
+    }
+        private void ClearScores(int[] getScores )
+    {
+        getScores[0] = 0;
+        getScores[1] = 0;
+        getScores[2] = 0;
+    }
     
 }
